@@ -34,23 +34,33 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <html>
 <head>
     <title>Login</title>
-    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/login_reg_style.css">
 </head>
 <body>
-    <h2>Login</h2>
-    <?php if ($message): ?>
-        <p style="color:red;"><?php echo $message; ?></p>
-    <?php endif; ?>
-
+<div class="container">
+    <!-- Entire content is now inside the form -->
     <form method="post" action="">
-        <label>Email:</label><br>
-        <input type="email" name="email" required><br><br>
+        <div class="login-wrapper">
+            <h2>Login</h2>
 
-        <label>Password:</label><br>
-        <input type="password" name="password" required><br><br>
+            <!-- Display error message if there is one -->
+            <?php if ($message): ?>
+                <p class="error-message"><?php echo $message; ?></p>
+            <?php endif; ?>
 
-        <input type="submit" value="Login">
+            <label>Email:</label><br>
+            <input type="email" name="email" required><br><br>
+
+            <label>Password:</label><br>
+            <input type="password" name="password" required><br><br>
+
+            <input type="submit" value="Login">
+
+            <!-- Register link inside the same box -->
+            <div class="register-link">
+                <p>Don't have an account? <a href="register.php">Register here</a></p>
+            </div>
+        </div>
     </form>
-    <label for="register"><a href="register.php">register</a></label>
-</body>
-</html>
+</div>
+

@@ -20,32 +20,38 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 ?>
 
-<!-- HTML Part -->
 <!DOCTYPE html>
 <html>
 <head>
     <title>Register</title>
+    <link rel="stylesheet" href="../assets/css/login_reg_style.css"> <!-- reuse same CSS -->
 </head>
 <body>
-    <h2>User Registration</h2>
+    <div class="container">
+        <form method="post" action="">
+            <h2>Register</h2>
 
-    <?php if ($message): ?>
-        <p style="color: <?= strpos($message, 'successful') !== false ? 'green' : 'red' ?>;">
-            <?php echo $message; ?>
-        </p>
-    <?php endif; ?>
+            <?php if ($message): ?>
+                <p class="error-message" style="color: <?= strpos($message, 'successful') !== false ? 'limegreen' : '#ff3f3f' ?>;">
+                    <?= $message ?>
+                </p>
+            <?php endif; ?>
 
-    <form method="post" action="">
-        <label>Name:</label><br>
-        <input type="text" name="name" required><br><br>
+            <label>Name:</label>
+            <input type="text" name="name" required>
 
-        <label>Email:</label><br>
-        <input type="email" name="email" required><br><br>
+            <label>Email:</label>
+            <input type="email" name="email" required>
 
-        <label>Password:</label><br>
-        <input type="password" name="password" required><br><br>
+            <label>Password:</label>
+            <input type="password" name="password" required>
 
-        <input type="submit" value="Register">
-    </form>
+            <input type="submit" value="Register">
+
+            <div class="register-link">
+                <p>Already have an account? <a href="login.php">Login here</a></p>
+            </div>
+        </form>
+    </div>
 </body>
 </html>
