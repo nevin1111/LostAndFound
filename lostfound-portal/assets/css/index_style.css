@@ -1,0 +1,110 @@
+/* Reset default browser styles */ 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    background: #000000; /* Dark background */
+    color: #fff; /* White text for contrast */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Main container to hold content */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+/* Header style */
+header {
+    text-align: center;
+    padding: 60px 20px;
+    background: rgba(255, 255, 255, 0.1); /* Transparent white */
+    border-bottom: 5px solid #0026ff; /* Light blue border */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+    font-size: 3.5em;
+    color: #fff; /* White text */
+    font-weight: bold;
+}
+
+header p {
+    font-size: 1.2em;
+    color: #bbb; /* Light grey */
+    margin-top: 10px;
+}
+
+/* Main content area */
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.btn-container {
+    display: flex;
+    gap: 25px;
+}
+
+.btn {
+    padding: 15px 30px;
+    font-size: 1.1em;
+    font-weight: bold;
+    border-radius: 25px;
+    text-decoration: none;
+    text-align: center;
+    transition: 0.3s;
+    width: 200px;
+    text-transform: uppercase;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.primary {
+    background-color: #0026ff; /* Bright blue */
+    color: white;
+}
+
+.primary:hover {
+    background-color: #4a59c2; /* Darker blue on hover */
+}
+
+.secondary {
+    background-color: #fff;
+    color: #000000;
+}
+
+.secondary:hover {
+    background-color: #4a59c2; /* Light grey on hover */
+}
+
+footer {
+    background-color: #111; /* Dark footer */
+    color: #bbb; /* Light grey text */
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9em;
+    border-top: 5px solid #0026ff; /* Blue border */
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Ensure footer stays at the bottom if content is short */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
